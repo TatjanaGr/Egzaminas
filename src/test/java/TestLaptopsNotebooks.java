@@ -24,8 +24,7 @@ public class TestLaptopsNotebooks extends BaseTest{
        if (laptopsNotebooks.getAvailabilityText(availabilityInStock).contains("Out Of Stock")) {
         System.out.println(laptopsNotebooks.findProductName(productName) + " Is Not In Stock");
     } else {
-        System.out.println(laptopsNotebooks.findProductName(productName) + " Is In Stock");
-    }
+           }
     mainPage.clickButtonLaptopsNotebooks();
     mainPage.clickButtonShowAllLaptopsNotebooks();
     waitUtils.waitForJS(driver);
@@ -35,6 +34,7 @@ public class TestLaptopsNotebooks extends BaseTest{
     assertEquals(laptopsNotebooks.findProductName(productName)+ " is In Stock", laptopsNotebooks.getAvailabilityText(availabilityInStock), availabilityInStock);
 
     if (laptopsNotebooks.getAvailabilityText(availabilityInStock).contains("Out Of Stock")) {
+        System.out.println("Test failed at least one item is out of Stock:");
         System.out.println(laptopsNotebooks.findProductName(productName) + " Is Not In Stock");
     } else {
         System.out.println(laptopsNotebooks.findProductName(productName) + " Is In Stock");

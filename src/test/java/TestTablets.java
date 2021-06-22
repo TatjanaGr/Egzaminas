@@ -25,6 +25,7 @@ public class TestTablets extends BaseTest{
         if (tablets.getAvailabilityText(availabilityInStock).contains("Out Of Stock")) {
             System.out.println(tablets.findProductName(productName) + " Is Not In Stock");
         } else {
+            System.out.println("Test passed all items are in Stock:");
             System.out.println(tablets.findProductName(productName) + " Is In Stock");
         }
     }

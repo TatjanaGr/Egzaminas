@@ -24,19 +24,20 @@ public class TestPhonesPDAs extends BaseTest {
         if (phonesPDAs.getAvailabilityTextNew(availabilityInStock).contains("Out Of Stock")) {
             System.out.println(phonesPDAs.findProductName(productName) + " Is Not In Stock");
         } else {
-            System.out.println(phonesPDAs.findProductName(productName) + " Is In Stock");
+
         }
 
         mainPage.clickButtonPhonesPDAs();
         waitUtils.waitForJS(driver);
         phonesPDAs.clickiPhoneItemName();
-
+        waitUtils.waitForJS(driver);
         availabilityInStock = "Availability: Out Of Stock";
         productName = "iPhone";
 
         assertEquals(phonesPDAs.findProductName(productName) + "Is In Stock", phonesPDAs.getAvailabilityTextNew(availabilityInStock), availabilityInStock);
 
         if (phonesPDAs.getAvailabilityTextNew(availabilityInStock).contains("Out Of Stock")) {
+            System.out.println("Test failed at least one item is out of Stock:");
             System.out.println(phonesPDAs.findProductName(productName) + " Is Not In Stock");
         } else {
             System.out.println(phonesPDAs.findProductName(productName) + " Is In Stock");
