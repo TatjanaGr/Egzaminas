@@ -28,6 +28,7 @@ public class MainPage extends AbstractPage{
     public void clickButtonLaptopsNotebooks (){
         buttonLaptopsNotebooks.click();
     }
+
     public void clickButtonShowAllLaptopsNotebooks (){
         buttonShowAllLaptopsNotebooks.click();
         WaitUtils.waitForJS(driver);
@@ -35,6 +36,7 @@ public class MainPage extends AbstractPage{
     public void clickButtonTablets (){
         buttonTablets.click();
     }
+
     public void clickButtonPhonesPDAs (){
         buttonPhonesPDAs.click();
     }

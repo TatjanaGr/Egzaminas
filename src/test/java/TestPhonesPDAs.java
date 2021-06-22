@@ -17,7 +17,6 @@ public class TestPhonesPDAs extends BaseTest {
         waitUtils.waitForJS(driver);
         phonesPDAs.clickHTCTouchHDItemName();
 
-
         String availabilityInStock = "Availability: In Stock";
         String productName = "HTC Touch HD";
 
@@ -43,7 +42,6 @@ public class TestPhonesPDAs extends BaseTest {
             System.out.println(phonesPDAs.findProductName(productName) + " Is In Stock");
         }
 
-
         mainPage.clickButtonPhonesPDAs();
         waitUtils.waitForJS(driver);
         phonesPDAs.clickPalmTreoProItemName();
@@ -57,7 +55,6 @@ public class TestPhonesPDAs extends BaseTest {
         } else {
             System.out.println(phonesPDAs.findProductName(productName) + " Is In Stock");
         }
-
 
     }
 }
